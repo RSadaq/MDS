@@ -6,7 +6,9 @@ export const COLORS = {
     black: "#000000",
     white: "#ffffff",
     blue: "#3c58e6",
-    transparentBlack: 'rgba(0, 0, 0, 0.5)',
+    transparentBlack: 'rgba(0, 0, 0, 0.7)',
+    transparentWhite: 'rgba(255, 255, 255, 0.7)',
+    
 };
 
 export const SIZES = {
