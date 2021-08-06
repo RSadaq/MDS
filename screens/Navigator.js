@@ -19,7 +19,7 @@ export default function Navigator() {
     return (
         <NavigationContainer>
         <Tab.Navigator
-          screenOptions={({ route }) => ({
+          screenOptions={() => ({
             tabBarActiveTintColor: 'tomato',
             tabBarInactiveTintColor: 'gray',
           })}
