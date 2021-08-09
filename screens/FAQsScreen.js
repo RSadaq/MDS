@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { Stylesheet, Text, View } from 'react-native';
+import { Text, View } from 'react-native';
 
-export default function CardsScreen() {
+export default function FAQsScreen() {
     return (
       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text>Cards!</Text>
+        <Text>FAQs!</Text>
       </View>
     );
   }
