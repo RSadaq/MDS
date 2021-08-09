@@ -27,11 +27,11 @@ export default function Navigator() {
           })}
         >
           <Tab.Screen name="Home" component={HomeScreen} options={{
-      tabBarLabel: 'Home',
-      tabBarIcon: ({ color, size }) => (
-        <Ionicons name="home" color={color} size={size} />
-      ),
-    }}/>
+            tabBarLabel: 'Home',
+            tabBarIcon: ({ color, size }) => (
+              <Ionicons name="home" color={color} size={size} />
+            ),
+          }} />
           <Tab.Screen name="Blogs" component={BlogsScreen} options={{
             tabBarLabel: 'Blogs',
             tabBarIcon: ({ color, size }) => (
@@ -54,7 +54,7 @@ export default function Navigator() {
             tabBarLabel: 'Contact',
             tabBarIcon: ({ color, size }) => (
               <MaterialIcons name="contact-mail" color={color} size={size}/>
-            ),
+            ), 
           }}/>
         </Tab.Navigator>
       </NavigationContainer>
