@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { AntDesign } from '@expo/vector-icons'; 
-import { Stylesheet, Text, View, ScrollView, TouchableOpacity, Linking , Image, ImageBackground, Dimensions} from 'react-native';
-
+import { Text, View, ScrollView, TouchableOpacity, Linking , Image, ImageBackground, Dimensions} from 'react-native';
+import {Collapse,CollapseHeader, CollapseBody, AccordionList} from 'accordion-collapse-react-native';
 import { COLORS, SIZES, backgrounds } from '../constants';
 
 const openForm = () => {
 	// Contact Form goes here
+
 }
 export default function ContactScreen() {
     return (
