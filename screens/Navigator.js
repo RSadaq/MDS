@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Text, View } from 'react-native';
+import { Text, View, Image } from 'react-native';
 import { Ionicons, MaterialIcons, FontAwesome, FontAwesome5, MaterialCommunityIcons } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
@@ -27,30 +27,65 @@ export default function Navigator() {
           })}
         >
           <Tab.Screen name="Home" component={HomeScreen} options={{
+              headerRight: () => (
+                <Image
+                  style={{ width: 100, height: 55, marginLeft: 5 }}
+                  source={require('../assets/images/MDS-logo.png')}
+                  resizeMode='contain'
+                />
+              ),
             tabBarLabel: 'Home',
             tabBarIcon: ({ color, size }) => (
               <Ionicons name="home" color={color} size={size} />
             ),
           }} />
           <Tab.Screen name="Blogs" component={BlogsScreen} options={{
+              headerRight: () => (
+                <Image
+                  style={{ width: 100, height: 55, marginLeft: 5 }}
+                  source={require('../assets/images/MDS-logo.png')}
+                  resizeMode='contain'
+                />
+              ),
             tabBarLabel: 'Blogs',
             tabBarIcon: ({ color, size }) => (
               <FontAwesome name="pencil-square-o" color={color} size={size}/>
             ),
           }}/>
           <Tab.Screen name="Podcasts" component={Podcasts} options={{
+              headerRight: () => (
+                <Image
+                  style={{ width: 100, height: 55, marginLeft: 5 }}
+                  source={require('../assets/images/MDS-logo.png')}
+                  resizeMode='contain'
+                />
+              ),
             tabBarLabel: 'Podcasts',
             tabBarIcon: ({ color, size }) => (
               <FontAwesome5 name="headphones-alt" color={color} size={size}/>
             ),
           }}/>
           <Tab.Screen name="FAQs" component={FAQsScreen} options={{
+              headerRight: () => (
+                <Image
+                  style={{ width: 100, height: 55, marginLeft: 5 }}
+                  source={require('../assets/images/MDS-logo.png')}
+                  resizeMode='contain'
+                />
+              ),
             tabBarLabel: 'FAQs',
             tabBarIcon: ({ color, size }) => (
               <MaterialCommunityIcons name="frequently-asked-questions" color={color} size={size}/>
             ),
           }}/>
           <Tab.Screen name="Contact Us" component={ContactScreen} options={{
+              headerRight: () => (
+                <Image
+                  style={{ width: 100, height: 55, marginLeft: 5 }}
+                  source={require('../assets/images/MDS-logo.png')}
+                  resizeMode='contain'
+                />
+              ),
             tabBarLabel: 'Contact',
             tabBarIcon: ({ color, size }) => (
               <MaterialIcons name="contact-mail" color={color} size={size}/>
