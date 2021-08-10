@@ -101,6 +101,5 @@ export default function Navigator() {
       width: 100, 
       height: 55, 
       marginLeft: 5
-
     }
   })
