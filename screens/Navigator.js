@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Text, View, Image } from 'react-native';
+import { Text, View, Image, StyleSheet } from 'react-native';
 import { Ionicons, MaterialIcons, FontAwesome, FontAwesome5, MaterialCommunityIcons } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
@@ -29,7 +29,7 @@ export default function Navigator() {
           <Tab.Screen name="Home" component={HomeScreen} options={{
               headerRight: () => (
                 <Image
-                  style={{ width: 100, height: 55, marginLeft: 5 }}
+                style={styles.logo}
                   source={require('../assets/images/MDS-logo.png')}
                   resizeMode='contain'
                 />
@@ -42,7 +42,7 @@ export default function Navigator() {
           <Tab.Screen name="Blogs" component={BlogsScreen} options={{
               headerRight: () => (
                 <Image
-                  style={{ width: 100, height: 55, marginLeft: 5 }}
+                style={styles.logo}
                   source={require('../assets/images/MDS-logo.png')}
                   resizeMode='contain'
                 />
@@ -55,7 +55,7 @@ export default function Navigator() {
           <Tab.Screen name="Podcasts" component={Podcasts} options={{
               headerRight: () => (
                 <Image
-                  style={{ width: 100, height: 55, marginLeft: 5 }}
+                style={styles.logo}
                   source={require('../assets/images/MDS-logo.png')}
                   resizeMode='contain'
                 />
@@ -68,7 +68,7 @@ export default function Navigator() {
           <Tab.Screen name="FAQs" component={FAQsScreen} options={{
               headerRight: () => (
                 <Image
-                  style={{ width: 100, height: 55, marginLeft: 5 }}
+                style={styles.logo}
                   source={require('../assets/images/MDS-logo.png')}
                   resizeMode='contain'
                 />
@@ -81,7 +81,7 @@ export default function Navigator() {
           <Tab.Screen name="Contact Us" component={ContactScreen} options={{
               headerRight: () => (
                 <Image
-                  style={{ width: 100, height: 55, marginLeft: 5 }}
+                style={styles.logo}
                   source={require('../assets/images/MDS-logo.png')}
                   resizeMode='contain'
                 />
@@ -94,4 +94,13 @@ export default function Navigator() {
         </Tab.Navigator>
       </NavigationContainer>
     );
-  }
+  };
+
+  const styles = StyleSheet.create({
+    logo: {
+      width: 100, 
+      height: 55, 
+      marginLeft: 5
+
+    }
+  })
