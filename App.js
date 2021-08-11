@@ -1,12 +1,13 @@
-import * as React from 'react';
-import { Text, View } from 'react-native';
-import Navigator from './screens/Navigator';
+import React from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import { MainStackNavigator } from "./navigation/StackNavigator";
+import BottomTabNavigator from "./navigation/TabNavigator";
 
-
-export default function App() {
+ const App = () => {
   return (
-
-    Navigator()
-  
+    <NavigationContainer>
+    <BottomTabNavigator />
+    </NavigationContainer>
   );
 }
+export default App

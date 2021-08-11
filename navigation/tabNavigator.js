@@ -1,32 +1,26 @@
-import * as React from 'react';
-import { Text, View, Image, StyleSheet } from 'react-native';
-import { Ionicons, MaterialIcons, FontAwesome, FontAwesome5, MaterialCommunityIcons } from '@expo/vector-icons';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { NavigationContainer } from '@react-navigation/native';
-import HomeScreen from './HomeScreen';
-import BlogsScreen from './BlogsScreen';
-import ContactScreen from './ContactScreen';
-import Podcasts from './PodcastsScreen';
-import FAQsScreen from './FAQsScreen';
 
-HomeScreen();
-BlogsScreen();
-Podcasts();
-ContactScreen();
-FAQsScreen();
+import React from "react";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { StyleSheet, Image } from 'react-native';
+import { Ionicons, MaterialIcons, FontAwesome, FontAwesome5, MaterialCommunityIcons } from '@expo/vector-icons';
+import HomeScreen from '../screens/HomeScreen';
+import BlogsScreen from '../screens/BlogsScreen';
+import ContactScreen from '../screens/ContactScreen';
+import Podcasts from '../screens/PodcastsScreen';
+import FAQsScreen from "../screens/FAQsScreen";
 
 const Tab = createBottomTabNavigator();
 
-export default function Navigator() {
+const tabBarLabelStyle = {
+    tabBarActiveTintColor: 'red',
+    tabBarInactiveTintColor: 'black',
+  };
+
+const BottomTabNavigator = () => {
     return (
-        <NavigationContainer>
-        <Tab.Navigator
-          screenOptions={() => ({
-            tabBarActiveTintColor: 'red',
-            tabBarInactiveTintColor: 'black',
-          })}
-        >
-          <Tab.Screen name="Home" component={HomeScreen} options={{
+        <Tab.Navigator screenOptions={tabBarLabelStyle}>
+           
+           <Tab.Screen name="Home" component={HomeScreen} options={{
               headerRight: () => (
                 <Image
                 style={styles.logo}
@@ -92,14 +86,15 @@ export default function Navigator() {
             ), 
           }}/>
         </Tab.Navigator>
-      </NavigationContainer>
     );
-  };
-
-  const styles = StyleSheet.create({
+};
+const styles = StyleSheet.create({
     logo: {
-      width: 100, 
-      height: 55, 
+      width: 100,
+      height: 55,
       marginLeft: 5
+  
     }
   })
+
+export default BottomTabNavigator;
