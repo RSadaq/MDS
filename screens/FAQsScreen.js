@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
-import { Text, View } from 'react-native';
+import { Dimensions, ImageBackground, ScrollView, Text, View } from 'react-native';
+import { backgrounds } from '../constants';
 
+import Accordion from '../constants/Accordion'
 export default function FAQsScreen() {
-    return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text>FAQs!</Text>
-      </View>
+
+    return (  
+        <ScrollView>  
+              <Accordion/>
+        </ScrollView>     
+
     );
   }
