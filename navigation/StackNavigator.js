@@ -2,7 +2,7 @@ import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 
 import BlogsScreen from "../screens/BlogsScreen";
-import Tennis from "../Blogs/Tennis";
+import Tennis from "../blogs/Tennis";
 
 const Stack = createStackNavigator();
 
