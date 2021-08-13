@@ -1,45 +1,35 @@
-import * as React from 'react';
+import React from "react";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Text, View, Image, StyleSheet } from 'react-native';
+import { MainStackNavigator, ContactStackNavigator } from "./StackNavigator";
 import { Ionicons, MaterialIcons, FontAwesome, FontAwesome5, MaterialCommunityIcons } from '@expo/vector-icons';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { NavigationContainer } from '@react-navigation/native';
-import HomeScreen from './HomeScreen';
-import BlogsScreen from './BlogsScreen';
-import ContactScreen from './ContactScreen';
-import Podcasts from './PodcastsScreen';
-import FAQsScreen from './FAQsScreen';
-
-HomeScreen();
-BlogsScreen();
-Podcasts();
-ContactScreen();
-FAQsScreen();
+import HomeScreen from '../screens/HomeScreen';
+import BlogsScreen from '../screens/BlogsScreen';
+import ContactScreen from '../screens/ContactScreen';
+import Podcasts from '../screens/PodcastsScreen';
+import FAQsScreen from '../screens/FAQsScreen';
 
 const Tab = createBottomTabNavigator();
 
-export default function Navigator() {
-    return (
-        <NavigationContainer>
-        <Tab.Navigator
-          screenOptions={() => ({
-            tabBarActiveTintColor: 'red',
-            tabBarInactiveTintColor: 'black',
-          })}
-        >
-          <Tab.Screen name="Home" component={HomeScreen} options={{
-              headerRight: () => (
+const BottomTabNavigator = () => {
+  return (
+    <Tab.Navigator screenOptions={() => ({
+        tabBarActiveTintColor: 'firebrick',
+        tabBarInactiveTintColor: 'black',
+      })}>
+      <Tab.Screen name="Home" component={HomeScreen} options={{
+             headerRight: () => (
                 <Image
                 style={styles.logo}
                   source={require('../assets/images/MDS-logo.png')}
                   resizeMode='contain'
                 />
-              ),
+             ),
             tabBarLabel: 'Home',
             tabBarIcon: ({ color, size }) => (
-              <Ionicons name="home" color={color} size={size} />
-            ),
+                <Ionicons name="home" color={color} size={size} />),
           }} />
-          <Tab.Screen name="Blogs" component={BlogsScreen} options={{
+           <Tab.Screen name="Blogs" component={MainStackNavigator} options={{
               headerRight: () => (
                 <Image
                 style={styles.logo}
@@ -91,15 +81,17 @@ export default function Navigator() {
               <MaterialIcons name="contact-mail" color={color} size={size}/>
             ), 
           }}/>
-        </Tab.Navigator>
-      </NavigationContainer>
-    );
-  };
 
-  const styles = StyleSheet.create({
-    logo: {
-      width: 100, 
-      height: 55, 
-      marginLeft: 5
-    }
-  })
+          </Tab.Navigator>
+  );
+        };
+
+        const styles = StyleSheet.create({
+            logo: {
+              width: 100, 
+              height: 55, 
+              marginLeft: 5
+            }
+            })
+
+        export default BottomTabNavigator;
