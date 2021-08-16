@@ -1,3 +1,5 @@
+import { backgrounds } from "../app"
+
 const HOME_DATA = [
     {
       id: '1',

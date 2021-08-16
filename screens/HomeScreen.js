@@ -7,10 +7,10 @@ import {
 } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 
-import { COLORS, SIZES, backgrounds } from '../constants';
-import Quiz from '../components/Quiz';
-import Gallery from '../components/Gallery';
-import HOME_DATA from '../constants/HomeData';
+import { COLORS, SIZES, backgrounds } from '../constants/app';
+import Quiz from '../components/home/Quiz';
+import Gallery from '../components/home/Gallery';
+import HOME_DATA from '../constants/home/HomeData';
 
 const Item = ({ title, content, img, keyID }) => (
   <ImageBackground source={img} style={{ width: SIZES.width }} imageStyle={{ opacity: .3}} >
@@ -35,6 +35,7 @@ export default function HomeScreen() {
         <ScrollView>
           <View>
             <Gallery />
+
           </View>
           {
             HOME_DATA.map(function(item){

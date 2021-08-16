@@ -7,8 +7,8 @@ import {
     Animated,
 } from 'react-native'
 
-import { COLORS, SIZES } from '../constants';
-import QUESTIONS from '../constants/QuizQuestions';
+import { COLORS, SIZES } from '../../constants/app';
+import QUESTIONS from '../../constants/home/QuizQuestions';
 
 export default class Quiz extends Component {
     constructor() {

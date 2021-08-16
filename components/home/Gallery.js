@@ -7,8 +7,8 @@ import {
 } from 'react-native'
 import { FontAwesome } from '@expo/vector-icons'; 
 
-import { COLORS, SIZES } from '../constants';
-import GALLERY_DATA from '../constants/Gallery';
+import { COLORS, SIZES } from '../../constants/app';
+import GALLERY_DATA from '../../constants/home/Gallery';
 
 export default class Gallery extends Component {
     constructor(props) {
