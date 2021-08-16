@@ -2,7 +2,7 @@ import { backgrounds } from "../app"
 
 const HOME_DATA = [
     {
-      id: '1',
+      id: 'home1',
       title: 'Our Story',
       image: backgrounds.tennis,
       content: [
@@ -13,7 +13,7 @@ const HOME_DATA = [
       ],
     },
     {
-      id: '2',
+      id: 'home2',
       title: 'Our Mission',
       image: backgrounds.runner,
       content: [
