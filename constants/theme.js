@@ -3,9 +3,12 @@ const { width, height } = Dimensions.get("window");
 
 export const COLORS = {
     // custom colors go here
+    DarkOrange: "rgba(211, 84, 0, 1)",
     black: "#000000",
     white: "#ffffff",
-    blue: "#3c58e6",
+    blue: "rgba(31, 58, 147, 1)",
+    transparentdarkOrange: "rgba(211, 84, 0, 0.2)",
+    transparentdarkPurple: "rgba(154, 18, 179, 0.2)",
     transparentBlack: 'rgba(0, 0, 0, 0.7)',
     transparentWhite: 'rgba(255, 255, 255, 0.7)',
     
