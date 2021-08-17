@@ -1,10 +1,24 @@
 import React, { useState } from 'react';
-import { Stylesheet, Text, View } from 'react-native';
+import { Card, Title } from 'react-native-paper';
+import { ScrollView, Stylesheet, Text, View, Linking } from 'react-native';
+import { WebView} from 'react-native-webview';
 
 export default function Podcasts() {
+ 
+  
     return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text>Podcasts!</Text>
-      </View>
+
+      <WebView
+       
+        source={{ uri: 
+          'https://open.spotify.com/show/68Vu1ivMbFDM0567vnRP88?http=1'
+        }}
+       
+       
+      
+      />
+
+ 
+  
     );
   }
