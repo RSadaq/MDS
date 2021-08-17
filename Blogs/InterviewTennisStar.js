@@ -1,10 +1,10 @@
 import React from "react";
 import { View, StyleSheet, Text } from "react-native";
 
-const Running = () => {
+const InterviewTennisStar= () => {
   return (
     <View style={styles.center}>
-      <Text>This is the running blog!</Text>
+      <Text>This is the interview with a Tennis Star blog!</Text>
     </View>
   );
 };
@@ -18,4 +18,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Running;
+export default InterviewTennisStar;
