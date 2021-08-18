@@ -10,7 +10,7 @@ const Stack = createStackNavigator();
 
 const screenOptionStyle = {
   headerStyle: {
-    backgroundColor: "black",
+    backgroundColor: "firebrick",
   },
   headerTintColor: "white",
   headerBackTitle: "back",
@@ -22,7 +22,7 @@ const MainStackNavigator = () => {
       <Stack.Screen name="BlogsStack" component={BlogsScreen} options={{ headerShown: false }} />
       <Stack.Screen name="Tennis" component={Tennis} />
       <Stack.Screen name="BreakingOutOfSlump" component={BreakingOutOfSlump} />
-      <Stack.Screen name="InterviewTennisStar" component={InterviewTennisStar} />
+      <Stack.Screen name="InterviewTennisStar" component={InterviewTennisStar} options={{ title: 'Back to blogs'}}/>
       <Stack.Screen name="AthletesAndPoker" component={AthletesAndPoker} />
     </Stack.Navigator>
   );
