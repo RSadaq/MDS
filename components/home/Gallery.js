@@ -36,8 +36,8 @@ export default class Gallery extends Component {
 
     render() {
         return (
-            <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'center', backgroundColor: COLORS.black, alignItems:'center'}} key="gallery1">
-                <FontAwesome name="chevron-left" size={24} color={COLORS.DarkOrange} style={{ margin: 5}}/>
+            <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'center', backgroundColor: COLORS.white, alignItems:'center'}} key="gallery1">
+                <FontAwesome name="chevron-left" size={24} color='firebrick' style={{ margin: 5}}/>
                 <Carousel
                     layout={"default"}
                     loop={true}
@@ -47,7 +47,7 @@ export default class Gallery extends Component {
                     itemWidth={SIZES.width - 10}
                     renderItem={this._renderItem}
                     onSnapToItem={index => this.setState({ activeIndex: index })} />
-                <FontAwesome name="chevron-right" size={24} color={COLORS.DarkOrange} style={{ margin: 5}}/>
+                <FontAwesome name="chevron-right" size={24} color='firebrick' style={{ margin: 5}}/>
             </View>
         )
     }

@@ -6,7 +6,7 @@ export const COLORS = {
     DarkOrange: "rgba(211, 84, 0, 1)",
     black: "#000000",
     white: "#ffffff",
-    blue: "rgba(31, 58, 147, 1)",
+    blue: "#0303ab",
     DarkOrange: "rgba(211, 84, 0, 1)",
     transparentdarkOrange: "rgba(211, 84, 0, 0.7)",
     transparentdarkPurple: "rgba(154, 18, 179, 0.7)",
@@ -20,6 +20,7 @@ export const SIZES = {
 
     // font sizes
     small: 14,
+    p: 16,
     medium: 18,
     large: 24,
 

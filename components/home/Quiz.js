@@ -32,11 +32,21 @@ export default class Quiz extends Component {
     };
 
     checkAnswer = ( prompt ) => {
+        let answerIsCorrect = true;
         if (prompt == QUESTIONS[this.state.questionNumber].answer) {
+            answerIsCorrect == true;
             this.setState( prevState => ({ score : prevState.score + 1}));
         } else {
-            this.setState( prevState => ({ score : prevState.score - 1}));
+            answerIsCorrect = false;
         }
+        Alert.alert(
+            answerIsCorrect ? 'You got it correct!' : 'The answer is actually ' + QUESTIONS[this.state.questionNumber].answer,
+            QUESTIONS[this.state.questionNumber].info,
+            [
+                { text: "OK"}
+            ],
+        )
+
         this.updateQuestion();
     }
 
@@ -45,7 +55,7 @@ export default class Quiz extends Component {
         if (this.state.questionNumber == 9) {
             Alert.alert(
                 "Congratz!",
-                "You got " + this.state.score + "/10!",
+                "You got " + this.state.score + " out of 12",
                 [
                     { text: "OK"}
                 ],
