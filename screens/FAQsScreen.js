@@ -13,7 +13,7 @@ function Accordion() {
   const theme = {
       roundness: 2,
       colors: {
-        background: '#b84949',
+        background: 'firebrick',
         text: 'white',
         primary: 'white'
       },
