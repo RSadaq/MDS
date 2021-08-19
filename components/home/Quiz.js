@@ -43,16 +43,17 @@ export default class Quiz extends Component {
             answerIsCorrect ? 'You got it correct!' : 'The answer is actually ' + QUESTIONS[this.state.questionNumber].answer,
             QUESTIONS[this.state.questionNumber].info,
             [
-                { text: "OK"}
+                { 
+                    text: "OK",
+                    onPress: () => this.updateQuestion(),
+                }  
             ],
         )
-
-        this.updateQuestion();
     }
 
     updateQuestion = () => {
-        // total number of questions is 10, give score & restart game
-        if (this.state.questionNumber == 9) {
+        // total number of questions is 12, give score & restart game
+        if (this.state.questionNumber == 11) {
             Alert.alert(
                 "Congratz!",
                 "You got " + this.state.score + " out of 12",
@@ -74,9 +75,9 @@ export default class Quiz extends Component {
                 <View style={{ backgroundColor: COLORS.transparentBlack, borderRadius: 10, paddingHorizontal: 10, marginTop: 10 }}>
                     <Text style={{ color:COLORS.white, paddingTop: 10, fontStyle: 'italic', fontWeight: 'bold' }} >Score: {this.state.score}</Text>
                     <View style={{ justifyContent: 'space-evenly', paddingHorizontal: SIZES.paddingHeader, height: SIZES.height / 4 }} key='3b'>
-                        <Text style={{ color:COLORS.white, fontSize: SIZES.small, lineHeight: 25 }} key='3ba'>{QUESTIONS[this.state.questionNumber].question}</Text>
-                        <Button title="True" color={COLORS.blue} onPress={() => this.checkAnswer("True")} key='3bb' />
-                        <Button title="False" color={COLORS.blue} onPress={() => this.checkAnswer("False")} key='3bc' />
+                        <Text style={{ color:COLORS.white, fontSize: SIZES.small, lineHeight: 25 }}>{this.state.questionNumber + 1}. {QUESTIONS[this.state.questionNumber].question}</Text>
+                        <Button title="True" color={COLORS.blue} onPress={() => this.checkAnswer("True")}/>
+                        <Button title="False" color={COLORS.blue} onPress={() => this.checkAnswer("False")}/>
                 </View>
                 </View>
             </View>

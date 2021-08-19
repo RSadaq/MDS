@@ -7,8 +7,7 @@ import {
   Image,
   StyleSheet,
 } from 'react-native';
-import TextTicker from 'react-native-text-ticker'
-import { LinearGradient } from 'expo-linear-gradient';
+// import TextTicker from 'react-native-text-ticker'
 import { FontAwesome5 } from '@expo/vector-icons';
 
 import { COLORS, SIZES, backgrounds } from '../constants/app';
@@ -39,13 +38,13 @@ const Item = ({ title, content, img, Textcolor }) => {
                 <Text key={string.substring(0,3)}
                 style={{
                   color: Textcolor,
-                  justifyContent:'space-between',
+                  textAlign:'center',
                   fontSize: SIZES.p,
                   paddingHorizontal: 20,
                   lineHeight: 25,
                   paddingBottom: 10,
                 }}>
-                  {'\t'}{string}
+                  {string}
                 </Text>)
               )
             }
@@ -68,12 +67,12 @@ const Item = ({ title, content, img, Textcolor }) => {
                 <Text key={string.substring(0,3)}
                 style={{
                   color: Textcolor,
-                  justifyContent:'space-between',
+                  textAlign:'center',
                   fontSize: SIZES.p,
                   paddingHorizontal: 20,
                   lineHeight: 25,
                 }}>
-                  {'\t'}{string}
+                  {string}
                 </Text>)
               )
             }
@@ -84,8 +83,8 @@ const Item = ({ title, content, img, Textcolor }) => {
 export default function HomeScreen() {
   return (
     <View>
-      <View style={{ backgroundColor:'firebrick', height:40, paddingTop:5}}>
-        <TextTicker
+      <View style={{ backgroundColor:'firebrick', height:35, paddingTop:5}}>
+        {/* <TextTicker
           style={{color:COLORS.white, fontSize:SIZES.medium, fontStyle:'italic', fontWeight:'bold'}}
           duration={3000}
           loop
@@ -93,10 +92,12 @@ export default function HomeScreen() {
           isRTL='true'
           repeatSpacer={20}
           marqueeDelay={0}
-        >
-          <Text>Improving bodies and minds in sport. By teens, for teens   </Text>
-          <FontAwesome5 name="running" size={24} color="white" />
-        </TextTicker>
+        > */}
+        <View style={{flexDirection:'row', paddingLeft: 8}}>
+          <Text style={{color:COLORS.white, fontSize:SIZES.small, fontStyle:'italic', fontWeight:'bold'}}>Improving bodies and minds in sport. By teens, for teens   </Text>
+          <FontAwesome5 name="running" size={20} color="white" />
+        </View>
+        {/* </TextTicker> */}
       </View>
       <ScrollView>
         <Gallery />
@@ -109,7 +110,7 @@ export default function HomeScreen() {
             )
           })
         }
-        <ImageBackground source={backgrounds.library} style={{ width: SIZES.width }} key="quiz1">
+        <ImageBackground source={backgrounds.library} style={{ width: SIZES.width, marginTop: 150, marginBottom: 180}} key="quiz1">
           <Quiz/>
         </ImageBackground>
       </ScrollView>
