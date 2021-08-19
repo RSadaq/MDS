@@ -1,7 +1,6 @@
 import React from "react";
 import { View, StyleSheet, Text, Image, ScrollView, Linking } from "react-native";
 import { Paragraph } from "react-native-paper";
-import HyperLink from "react-native-hyperlink";
 
 const AthletesAndPoker = () => {
   return (
@@ -75,7 +74,6 @@ const styles = StyleSheet.create({
   paragraph: {
     textAlign: 'justify',
     marginBottom: 20
-
   },
   subtitle: {
     color: 'firebrick',
