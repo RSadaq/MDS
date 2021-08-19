@@ -7,6 +7,7 @@ import AthletesAndPoker from "../blogs/AthletesAndPoker";
 import BreakingOutOfSlump from "../blogs/BreakingOutOfSlump";
 
 const Stack = createStackNavigator();
+const title = 'Back to Blogs';
 
 const screenOptionStyle = {
   headerStyle: {
@@ -20,10 +21,10 @@ const MainStackNavigator = () => {
   return (
     <Stack.Navigator screenOptions={screenOptionStyle}>
       <Stack.Screen name="BlogsStack" component={BlogsScreen} options={{ headerShown: false }} />
-      <Stack.Screen name="Tennis" component={Tennis} />
-      <Stack.Screen name="BreakingOutOfSlump" component={BreakingOutOfSlump} />
-      <Stack.Screen name="InterviewTennisStar" component={InterviewTennisStar} options={{ title: 'Back to blogs'}}/>
-      <Stack.Screen name="AthletesAndPoker" component={AthletesAndPoker} />
+      <Stack.Screen name="Tennis" component={Tennis} options={{ title: title }} />
+      <Stack.Screen name="BreakingOutOfSlump" component={BreakingOutOfSlump} options={{ title: title }}/>
+      <Stack.Screen name="InterviewTennisStar" component={InterviewTennisStar} options={{ title: title }} />
+      <Stack.Screen name="AthletesAndPoker" component={AthletesAndPoker} options={{ title: title }}/>
     </Stack.Navigator>
   );
 }

@@ -6,7 +6,7 @@ const InterviewTennisStar = () => {
   return (
     <ScrollView>
       <View style={styles.center}>
-        <Text style={{ color: 'steelblue', fontSize: 30, fontWeight: "bold" }}>What Sets The Elite From The Rest: An Interview with a Tennis Star</Text>
+        <Text style={{ color: 'steelblue', fontSize: 30, fontWeight: "bold", marginTop: 20 }}>What Sets The Elite From The Rest: An Interview with a Tennis Star</Text>
         <Text style={{ color: 'black', fontSize: 15 }}>By Priyaanka Sarkar, Aug 13</Text>
         <Image source={require('../assets/images/blog-images/tennis-rackets.jpeg')} style={{ width: 320, height: 200, marginTop: 20 }} />
         <Paragraph style={{ textAlign: 'justify' }}>
