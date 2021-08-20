@@ -16,6 +16,8 @@ export const COLORS = {
 };
 
 export const SIZES = {
+    padding: 20,
+    padding2: 40,
     paddingHeader: 30,
 
     // font sizes

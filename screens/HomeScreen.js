@@ -4,8 +4,6 @@ import {
   Text,
   View,
   ImageBackground,
-  Image,
-  StyleSheet,
 } from 'react-native';
 // import TextTicker from 'react-native-text-ticker'
 import { FontAwesome5 } from '@expo/vector-icons';
@@ -14,6 +12,7 @@ import { COLORS, SIZES, backgrounds } from '../constants/app';
 import Quiz from '../components/home/Quiz';
 import Gallery from '../components/home/Gallery';
 import HOME_DATA from '../constants/home/HomeData';
+
 
 const Item = ({ title, content, img, Textcolor }) => {
   const isBG = img ? true : false;  
@@ -84,22 +83,14 @@ export default function HomeScreen() {
   return (
     <View>
       <View style={{ backgroundColor:'firebrick', height:35, paddingTop:5}}>
-        {/* <TextTicker
-          style={{color:COLORS.white, fontSize:SIZES.medium, fontStyle:'italic', fontWeight:'bold'}}
-          duration={3000}
-          loop
-          bounce
-          isRTL='true'
-          repeatSpacer={20}
-          marqueeDelay={0}
-        > */}
-        <View style={{flexDirection:'row', paddingLeft: 8}}>
+        <View style={{flexDirection:'row', paddingHorizontal: 8, justifyContent:'space-around'}}>
           <Text style={{color:COLORS.white, fontSize:SIZES.small, fontStyle:'italic', fontWeight:'bold'}}>Improving bodies and minds in sport. By teens, for teens   </Text>
           <FontAwesome5 name="running" size={20} color="white" />
         </View>
-        {/* </TextTicker> */}
       </View>
-      <ScrollView>
+      <ScrollView
+        keyboardShouldPersistTaps='never'
+      >
         <Gallery />
         {
           HOME_DATA.map(function(item){
@@ -110,27 +101,10 @@ export default function HomeScreen() {
             )
           })
         }
-        <ImageBackground source={backgrounds.library} style={{ width: SIZES.width, marginTop: 150, marginBottom: 180}} key="quiz1">
+        <ImageBackground source={backgrounds.library} style={{ width: SIZES.width, marginBottom: 140}} key="quiz1">
           <Quiz/>
         </ImageBackground>
       </ScrollView>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  title: {
-    color: COLORS.white,
-    alignSelf:'center',
-    fontSize: SIZES.medium,
-    fontWeight: 'bold',
-    lineHeight: 50,
-  },
-  paragraph: {
-    color: COLORS.white,
-    justifyContent:'space-between',
-    fontSize: SIZES.small,
-    paddingHorizontal: 20,
-    lineHeight: 25,
-  },
-});

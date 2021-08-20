@@ -2,9 +2,10 @@ import React, { Component } from 'react'
 import {
     Text,
     View,
-    Button,
+    Pressable,
     Alert,
     Animated,
+    StyleSheet,
 } from 'react-native'
 
 import { COLORS, SIZES } from '../../constants/app';
@@ -72,15 +73,31 @@ export default class Quiz extends Component {
         return (
             <View style={{ padding: SIZES.paddingHeader }} key='3a'>
                 <Text style={{ color:COLORS.white, alignSelf: 'center', fontWeight: 'bold', fontSize: SIZES.medium }} key='3a'>Bored? Quiz Yourself</Text>
-                <View style={{ backgroundColor: COLORS.transparentBlack, borderRadius: 10, paddingHorizontal: 10, marginTop: 10 }}>
+                <View style={{ justifyContent:'space-between', height: 300, backgroundColor: COLORS.transparentBlack, borderRadius: 10, paddingHorizontal: 10, marginTop: 10 }}>
                     <Text style={{ color:COLORS.white, paddingTop: 10, fontStyle: 'italic', fontWeight: 'bold' }} >Score: {this.state.score}</Text>
-                    <View style={{ justifyContent: 'space-evenly', paddingHorizontal: SIZES.paddingHeader, height: SIZES.height / 4 }} key='3b'>
+                    <View style={{ paddingHorizontal: SIZES.padding }}>
                         <Text style={{ color:COLORS.white, fontSize: SIZES.small, lineHeight: 25 }}>{this.state.questionNumber + 1}. {QUESTIONS[this.state.questionNumber].question}</Text>
-                        <Button title="True" color={COLORS.blue} onPress={() => this.checkAnswer("True")}/>
-                        <Button title="False" color={COLORS.blue} onPress={() => this.checkAnswer("False")}/>
-                </View>
+                    </View>
+                    <View style={{justifyContent:'flex-end', paddingHorizontal: SIZES.padding2, paddingVertical: SIZES.padding, height: SIZES.height / 4 }}>
+                        <Pressable activeOpacity={.5} onPress={() => this.checkAnswer("True")} style={styles.button}><Text style={styles.buttonText}>True</Text></Pressable>
+                        <Pressable activeOpacity={.5} onPress={() => this.checkAnswer("False")} style={styles.button}><Text style={styles.buttonText}>False</Text></Pressable>
+                    </View>
                 </View>
             </View>
         );
     }
 }
+
+const styles = StyleSheet.create({
+    button: {
+        alignItems: "center",
+        backgroundColor: COLORS.blue,
+        padding: 10,
+        marginBottom: 5,
+    },
+    buttonText: {
+        fontSize: SIZES.medium,
+        color: COLORS.white,
+    }
+    
+});

@@ -20,7 +20,7 @@ export default class Gallery extends Component {
         }
     }
 
-    _renderItem({ item, index }) {
+    _renderItem({ item }) {
         return (
             <View style={{ width: SIZES.width - 50}}>
                 <ImageBackground source={item.image} style={{ height: SIZES.height- 130}} resizeMode='cover' >
