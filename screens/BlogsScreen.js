@@ -17,7 +17,7 @@ export default function BlogsScreen({ navigation }) {
           </Card>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => navigation.navigate("Tennis")}>
+        <TouchableOpacity onPress={() => navigation.navigate("ChampionOfTheCourt")}>
           <Card>
             <Card.Cover source={require('../assets/images/blog-images/tennis-player.jpeg')} style={styles.cardCoverStyling} />
             <Card.Content style={styles.cardContentStyling}>

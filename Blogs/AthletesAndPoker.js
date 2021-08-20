@@ -85,7 +85,6 @@ const styles = StyleSheet.create({
     color: 'blue',
     fontWeight: 'bold',
     textDecorationLine: 'underline'
-
   }
 });
 
