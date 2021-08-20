@@ -5,6 +5,8 @@ import InterviewTennisStar from "../blogs/InterviewTennisStar";
 import AthletesAndPoker from "../blogs/AthletesAndPoker";
 import BreakingOutOfSlump from "../blogs/BreakingOutOfSlump";
 import ChampionOfTheCourt from "../blogs/ChampionOfTheCourt";
+import DealingWithFans from "../blogs/DealingWithFans";
+import ConsciousVsUnconscious from "../blogs/ConsciousVsUnconscious";
 
 const Stack = createStackNavigator();
 const title = 'Back to Blogs';
@@ -25,6 +27,9 @@ const MainStackNavigator = () => {
       <Stack.Screen name="BreakingOutOfSlump" component={BreakingOutOfSlump} options={{ title: title }}/>
       <Stack.Screen name="InterviewTennisStar" component={InterviewTennisStar} options={{ title: title }} />
       <Stack.Screen name="AthletesAndPoker" component={AthletesAndPoker} options={{ title: title }}/>
+      <Stack.Screen name="DealingWithFans" component={DealingWithFans} options={{ title: title }}/>
+      <Stack.Screen name="ConsciousVsUnconscious" component={ConsciousVsUnconscious} options={{ title: title }}/>
+  
     </Stack.Navigator>
   );
 }

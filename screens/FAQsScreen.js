@@ -116,7 +116,9 @@ export default function FAQsScreen() {
 
   return (
     <ScrollView>
+      <View style={{ backgroundColor: 'white'}}>
       <Accordion />
+      </View>
     </ScrollView>
 
   );

@@ -43,6 +43,24 @@ export default function BlogsScreen({ navigation }) {
             </Card.Content>
           </Card>
         </TouchableOpacity>
+
+        <TouchableOpacity onPress={() => navigation.navigate("DealingWithFans")}>
+          <Card>
+            <Card.Cover source={require('../assets/images/blog-images/cycling.jpeg')} style={styles.cardCoverStyling} />
+            <Card.Content style={styles.cardContentStyling}>
+              <Title style={styles.titleText}>Dealing With Fans For the First Time?</Title>
+            </Card.Content>
+          </Card>
+        </TouchableOpacity>
+
+        <TouchableOpacity onPress={() => navigation.navigate("ConsciousVsUnconscious")}>
+          <Card>
+            <Card.Cover source={require('../assets/images/blog-images/brain.jpeg')} style={styles.cardCoverStyling} />
+            <Card.Content style={styles.cardContentStyling}>
+              <Title style={styles.titleText}>The Conscious Brain vs. the Unconscious Brain</Title>
+            </Card.Content>
+          </Card>
+        </TouchableOpacity>
       </View>
     </ScrollView>
 
@@ -60,8 +78,8 @@ const styles = StyleSheet.create({
   pageStyling: {
     flexDirection: 'row',
     justifyContent: 'space-around',
-    marginTop: 10,
-    flexWrap: 'wrap'
+    flexWrap: 'wrap', 
+    backgroundColor: 'white'
   },
 
   cardContentStyling: {
