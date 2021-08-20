@@ -7,7 +7,7 @@ const BreakingOutOfSlump = () => {
     <ScrollView>
       <View style={styles.center}>
         <Text style={{ color: 'olivedrab', fontSize: 30, fontWeight: "bold", marginBottom: 20, marginTop: 20, width: 300 }}>Need to Break Out of Your Slump?</Text>
-        <Image source={require('../assets/images/blog-images/running.jpeg')} style={{ width: 200, height: 300, textAlign: 'center', marginBottom: 20 }} />
+        <Image source={require('../assets/images/blog-images/running.jpeg')} style={{ width: 200, height: 300, marginBottom: 20 }} />
         <Text style={{ color: 'black', fontSize: 15, marginBottom: 20 }}>By Frank Stola, Jul 9</Text>
         <Paragraph style={styles.paragraph}>
           It happens to every athlete. For days, weeks, or what seems like an eternity, you haven’t been playing up to your standard. You’re struggling, and you can’t seem to figure out why. You start pressing, desperate for success, and lose confidence in yourself as you question what has gone wrong. The term “slump” gets thrown around often in baseball but applies to all sports as well. It’s when your performance has fallen off in a bad way for an extended period of time. There are many ways to get out of a slump, and athletes respond differently to the wide variety of techniques. But no matter who you are, the mental side of your game is crucial in getting out of your slump. Building confidence through repetition, visualizing success, and taking a step back are some of the best ways to get your head in the game.
