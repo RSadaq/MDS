@@ -6,6 +6,10 @@ import { COLORS, SIZES, backgrounds } from '../constants';
 
 const openForm = () => {
 	// Contact Form goes here
+	const openForm = () => {
+<Button onPress={() => Linking.openURL('mailto:agw52@scarletmail.rutgers.edu?subject=SendMail&body=Description') }
+      title="Contact Us" />
+}
 }
 export default function ContactScreen() {
 	return (
