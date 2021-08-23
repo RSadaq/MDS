@@ -1,5 +1,5 @@
-import { backgrounds } from "../app"
-import { COLORS } from "../app";
+import { backgrounds } from ".."
+import { COLORS } from "..";
 
 const HOME_DATA = [
     {

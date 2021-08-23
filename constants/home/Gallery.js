@@ -1,4 +1,4 @@
-import { backgrounds } from "../app"
+import { backgrounds } from "..";
 
 const GALLERY_DATA = [
     {

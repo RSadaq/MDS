@@ -8,7 +8,7 @@ import {
 import { FontAwesome } from '@expo/vector-icons';
 import Carousel from 'react-native-snap-carousel';
 
-import { COLORS, SIZES } from '../../constants/app';
+import { COLORS, SIZES } from '../../constants';
 import GALLERY_DATA from '../../constants/home/Gallery';
 
 export default class Gallery extends Component {

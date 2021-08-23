@@ -8,7 +8,7 @@ import {
 // import TextTicker from 'react-native-text-ticker'
 import { FontAwesome5 } from '@expo/vector-icons';
 
-import { COLORS, SIZES, backgrounds } from '../constants/app';
+import { COLORS, SIZES, backgrounds } from '../constants';
 import Quiz from '../components/home/Quiz';
 import Gallery from '../components/home/Gallery';
 import HOME_DATA from '../constants/home/HomeData';

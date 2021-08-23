@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { AntDesign } from '@expo/vector-icons'; 
 import { Stylesheet, Text, View, ScrollView, TouchableOpacity, Linking , Image, ImageBackground } from 'react-native';
 
-import { COLORS, SIZES, backgrounds } from '../constants/app';
+import { COLORS, SIZES, backgrounds } from '../constants';
 
 const openForm = () => {
 	// Contact Form goes here

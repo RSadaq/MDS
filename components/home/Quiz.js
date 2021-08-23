@@ -8,7 +8,7 @@ import {
     StyleSheet,
 } from 'react-native'
 
-import { COLORS, SIZES } from '../../constants/app';
+import { COLORS, SIZES } from '../../constants';
 import QUESTIONS from '../../constants/home/QuizQuestions';
 
 export default class Quiz extends Component {
