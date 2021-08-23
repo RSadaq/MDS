@@ -1,12 +1,12 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import BlogsScreen from "../screens/BlogsScreen";
-import InterviewTennisStar from "../blogs/InterviewTennisStar";
-import AthletesAndPoker from "../blogs/AthletesAndPoker";
-import BreakingOutOfSlump from "../blogs/BreakingOutOfSlump";
-import ChampionOfTheCourt from "../blogs/ChampionOfTheCourt";
-import DealingWithFans from "../blogs/DealingWithFans";
-import ConsciousVsUnconscious from "../blogs/ConsciousVsUnconscious";
+import InterviewTennisStar from "../Blogs/InterviewTennisStar";
+import AthletesAndPoker from "../Blogs/AthletesAndPoker";
+import BreakingOutOfSlump from "../Blogs/BreakingOutOfSlump";
+import ChampionOfTheCourt from "../Blogs/ChampionOfTheCourt";
+import DealingWithFans from "../Blogs/DealingWithFans";
+import ConsciousVsUnconscious from "../Blogs/ConsciousVsUnconscious";
 
 const Stack = createStackNavigator();
 const title = 'Back to Blogs';
