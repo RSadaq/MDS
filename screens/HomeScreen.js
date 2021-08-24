@@ -35,8 +35,9 @@ const Item = ({ title, content, img, Textcolor }) => {
                 <Text key={string.substring(0,3)}
                 style={{
                   color: Textcolor,
-                  textAlign:'center',
+                  textAlign:'justify',
                   fontSize: SIZES.p,
+                  fontWeight: 'bold',
                   paddingHorizontal: 20,
                   lineHeight: 25,
                   paddingBottom: 10,
@@ -64,7 +65,8 @@ const Item = ({ title, content, img, Textcolor }) => {
                 <Text key={string.substring(0,3)}
                 style={{
                   color: Textcolor,
-                  textAlign:'center',
+                  textAlign:'justify',
+                  fontWeight: 'bold',
                   fontSize: SIZES.p,
                   paddingHorizontal: 20,
                   lineHeight: 25,
@@ -80,10 +82,10 @@ const Item = ({ title, content, img, Textcolor }) => {
 export default function HomeScreen() {
   return (
     <View>
-      <View style={{ backgroundColor:'firebrick', height:35, paddingTop:5}}>
+      <View style={{ backgroundColor:'firebrick', height:60, paddingTop:5}}>
         <View style={{flexDirection:'row', paddingHorizontal: 8, justifyContent:'space-around'}}>
-          <Text style={{color:COLORS.white, fontSize:SIZES.small, fontStyle:'italic', fontWeight:'bold'}}>Improving bodies and minds in sport. By teens, for teens   </Text>
-          <FontAwesome5 name="running" size={20} color="white" />
+        <FontAwesome5 name="running" size={30} color="white" style={{ marginTop: 10}} />
+          <Text style={{color:COLORS.white, fontSize:SIZES.medium, fontStyle:'italic', fontWeight:'bold', textAlign: 'center'}}>Improving Bodies and Minds in Sport. {'\n'}BY teens, FOR teens! </Text>
         </View>
       </View>
       <ScrollView

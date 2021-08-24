@@ -72,11 +72,11 @@ export default class Quiz extends Component {
     render() {
         return (
             <View style={{ padding: SIZES.paddingHeader }} key='3a'>
-                <Text style={{ color:COLORS.white, alignSelf: 'center', fontWeight: 'bold', fontSize: SIZES.medium }} key='3a'>Bored? Quiz Yourself</Text>
+                <Text style={{ color:COLORS.white, alignSelf: 'center', fontWeight: 'bold', fontSize: SIZES.large }} key='3a'>Bored? Quiz Yourself</Text>
                 <View style={{ justifyContent:'space-between', height: 300, backgroundColor: COLORS.transparentBlack, borderRadius: 10, paddingHorizontal: 10, marginTop: 10 }}>
                     <Text style={{ color:COLORS.white, paddingTop: 10, fontStyle: 'italic', fontWeight: 'bold' }} >Score: {this.state.score}</Text>
                     <View style={{ paddingHorizontal: SIZES.padding }}>
-                        <Text style={{ color:COLORS.white, fontSize: SIZES.small, lineHeight: 25 }}>{this.state.questionNumber + 1}. {QUESTIONS[this.state.questionNumber].question}</Text>
+                        <Text style={{ color:COLORS.white, fontSize: SIZES.medium, lineHeight: 25 }}>{this.state.questionNumber + 1}. {QUESTIONS[this.state.questionNumber].question}</Text>
                     </View>
                     <View style={{justifyContent:'flex-end', paddingHorizontal: SIZES.padding2, paddingVertical: SIZES.padding, height: SIZES.height / 4 }}>
                         <Pressable activeOpacity={.5} onPress={() => this.checkAnswer("True")} style={styles.button}><Text style={styles.buttonText}>True</Text></Pressable>
