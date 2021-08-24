@@ -4,9 +4,6 @@ import { Stylesheet, Text, View, ScrollView, TouchableOpacity, Linking, Image, I
 
 import { COLORS, SIZES, backgrounds } from '../constants';
 
-const openForm = () => {
-	// Contact Form goes here
-}
 export default function ContactScreen() {
 	return (
 		<View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
@@ -27,8 +24,8 @@ export default function ContactScreen() {
 					</View>
 					<View style={{ backgroundColor: COLORS.transparentWhite }}>
 						<TouchableOpacity
-							style={{ padding: 10, margin: 20, borderRadius: 4, alignItems: 'center', backgroundColor: COLORS.blue }}
-							onPress={openForm}
+							style={{ padding: 10, margin: 20, borderRadius: 4, alignItems: 'center', backgroundColor: 'firebrick' }}
+							onPress= {() => Linking.openURL('mailto:MindDesignSports@gmail.com?subject=Enquiry&body=')}
 						>
 							<Text style={{ color: COLORS.white }}>Contact Us!</Text>
 						</TouchableOpacity>
