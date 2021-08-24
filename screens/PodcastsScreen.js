@@ -19,20 +19,22 @@ export default function Podcasts() {
       <FlatList
 
         data={[
-          { title: 'The Sport-Mind Avenue Episode 14: USA is #1, NFL Vaccine Talk, and Field of Dreams Game', image: field, symbol: podcast, key: '1' },
-          { title: 'Tactics to Secure Sports Scholarships - EP18 w/Tessa Berger', image: scholarships, symbol: podcast, key: '2' },
-          { title: 'The Sport-Mind Avenue Episode 13: Simone Biles Discussion, MLB Trade Deadline, and NBA Free', image: simone, symbol: podcast, key: '3' },
-          { title: 'The Sport-Mind Avenue Episode 12: Bucks Win NBA Finals, Unruly MLB Fans, and NHL Expansion', image: nba, symbol: podcast, key: '4' },
-          { title: 'Episode 11: Call of Duty League Executive Producer Michael Berger, Ohtani Talk, and Playoff', image: callOfDuty, symbol: podcast, key: '5' },
-          { title: 'The Mindset to The Olympics - EP17 w/George Steffey', image: mindset, symbol: podcast, key: '6'},
+          { title: 'The Sport-Mind Avenue Episode 14: USA is #1, NFL Vaccine Talk, and Field of Dreams Game', image: field, symbol: podcast, text: 'Listen', url: 'https://open.spotify.com/episode/3iFPCmofS7plcqxNmrayj1', key: '1' },
+          { title: 'Tactics to Secure Sports Scholarships - EP18 w/Tessa Berger', image: scholarships, symbol: podcast, text: 'Listen', url: 'https://open.spotify.com/episode/2aAQlMyXZJRHEY5xN7Yhq1', key: '2' },
+          { title: 'The Sport-Mind Avenue Episode 13: Simone Biles Discussion, MLB Trade Deadline, and NBA Free', image: simone, symbol: podcast, text: 'Listen', url: 'https://open.spotify.com/episode/1yUgIFCcLREo9y5qwVv21G', key: '3' },
+          { title: 'The Sport-Mind Avenue Episode 12: Bucks Win NBA Finals, Unruly MLB Fans, and NHL Expansion', image: nba, symbol: podcast, text: 'Listen', url: 'https://open.spotify.com/episode/3TY7vb8EhczhBwXkzFyddD', key: '4' },
+          { title: 'Episode 11: Call of Duty League Executive Producer Michael Berger, Ohtani Talk, and Playoff', image: callOfDuty, symbol: podcast, text: 'Listen', url: 'https://open.spotify.com/episode/1dNEO16nYhULdcII5MJ0NB', key: '5' },
+          { title: 'The Mindset to The Olympics - EP17 w/George Steffey', image: mindset, symbol: podcast, text: 'Listen', url: 'https://open.spotify.com/episode/6uB1CvME17Yr6cSL086R2I', key: '6'},
 
         ]}
         renderItem={({ item }) =>
           <View style={styles.container}>
             <Image style={styles.image} source={item.image} />
             <Text style={styles.title}>{item.title}</Text>
+            <View style={{ flexDirection: 'column'}}>
             <Image style={styles.clipart} source={item.symbol} />
-
+            <Text style={styles.text}  onPress={() => Linking.openURL(item.url)}>{item.text}</Text>
+            </View>
           </View>
 
         }
@@ -51,7 +53,8 @@ const styles = StyleSheet.create({
     marginLeft: 5, 
     marginRight: 5, 
     paddingVertical: 5, 
-    borderRadius: 5
+    borderRadius: 5, 
+    height: 110,
   },
   image: {
     height: 50, 
@@ -62,16 +65,21 @@ const styles = StyleSheet.create({
   }, 
   title: {
     marginLeft: 10, 
-    width: 200, 
+    width: 150, 
     marginTop: 4 
   }, 
   clipart: {
-    height: 45, 
-    width: 45, 
-    marginBottom: 20, 
-    marginLeft: 30, 
-    marginTop: 5
-
+    height: 30, 
+    width: 30, 
+    marginBottom: 5, 
+    marginLeft: 60, 
+    marginTop: 5, 
+  }, 
+  text: {
+    fontSize: 15,
+    marginLeft: 57, 
+    color: 'midnightblue', 
+    fontWeight: 'bold'
   }
 
   
