@@ -21,7 +21,7 @@ function Accordion() {
   };
 
   return (
-    <ImageBackground source={require('../assets/images/women-football.jpeg')} resizeMode='cover' style={{ flex: 1, justifyContent: 'center', paddingBottom: 200 }} imageStyle={{ top: -80, opacity: 0.4 }}>
+    <ImageBackground source={require('../assets/images/women-football.jpeg')} resizeMode='cover' style={{ flex: 1, justifyContent: 'center', paddingBottom: 200 }} imageStyle={{ top: -80, opacity: 0.3 }}>
     <List.Section style={{ marginLeft: 10, marginRight: 10 }}>
 
       <List.Section />

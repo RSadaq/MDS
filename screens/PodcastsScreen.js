@@ -47,19 +47,20 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'row', 
     borderStyle: 'solid', 
-    borderWidth: 4, 
+    borderWidth: 6, 
     borderColor: 'firebrick', 
     marginTop: 2, 
     marginLeft: 5, 
     marginRight: 5, 
     paddingVertical: 5, 
-    borderRadius: 5, 
+    borderRadius: 20, 
     height: 110,
+    backgroundColor: 'mintcream'
   },
   image: {
     height: 50, 
     width: 50, 
-    marginTop: 5, 
+    marginTop: 7, 
     marginLeft: 5, 
     borderRadius: 50
   }, 
