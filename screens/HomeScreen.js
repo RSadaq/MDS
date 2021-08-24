@@ -11,6 +11,7 @@ import { COLORS, SIZES, backgrounds } from '../constants';
 import Quiz from '../home/Quiz';
 import Gallery from '../home/Gallery';
 import HOME_DATA from '../home/HomeData';
+import QU from '../home/QU';
 
 const Item = ({ title, content, img, Textcolor }) => {
   const isBG = img ? true : false;  
@@ -101,6 +102,7 @@ export default function HomeScreen() {
             )
           })
         }
+        <QU />
         <ImageBackground source={backgrounds.library} style={{ width: SIZES.width, marginBottom: 140}} key="quiz1">
           <Quiz/>
         </ImageBackground>

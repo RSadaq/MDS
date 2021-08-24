@@ -1,28 +1,22 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { AntDesign } from '@expo/vector-icons';
-import { Stylesheet, Text, View, ScrollView, TouchableOpacity, Linking, Image, ImageBackground } from 'react-native';
+import { Text, View, TouchableOpacity, Linking, Image, ImageBackground } from 'react-native';
 
-import { COLORS, SIZES, backgrounds } from '../constants';
+import { COLORS, backgrounds, SIZES } from '../constants';
 
 export default function ContactScreen() {
 	return (
-		<View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-			<ImageBackground source={backgrounds.football} resizeMode='cover' style={{ flex: 1, justifyContent: 'center' }} imageStyle={{ top: -80 }}>
-				<ScrollView>
-					<View style={{ padding: 15, marginBottom: 160, backgroundColor: COLORS.transparentBlack }}>
-						<Text style={{ fontSize: SIZES.medium, fontWeight: 'bold', color: COLORS.white, lineHeight: 25 }}>
-							How do I not lose interest in a team sport, especially when I am playing with better teammates?
+		<View style={{ flex: 1 }}>
+			<ImageBackground source={backgrounds.tabletennis} resizeMode='cover' style={{ flex: 1, justifyContent: 'center' }} imageStyle={{ top: -80 }}>
+					<View style={{ backgroundColor: COLORS.transparentWhite, margin: 20 }}>
+						<Text style={{ color:'darkred', fontWeight: 'bold', fontSize: SIZES.medium, textAlign:'center', padding: 10, marginHorizontal: 20, marginTop: 20 }}>
+							If you have any questions or comments, please contact us via email or phone. You can also send us a message using the contact form. Feel free to leave us a review/testimonial!
 						</Text>
-					</View>
-
-					<View style={{ padding: 20, backgroundColor: COLORS.transparentBlack }}>
-						<Text style={{ fontSize: SIZES.small, color: COLORS.white, textAlign: 'left', lineHeight: 25 }}>
-							“A team is as strong as its weakest link,” is a common quote used by many coaches to help humble a team and help grow unity within a team. Many athletes lose interest and motivation for a sport from time to time especially if one feels like they are that weak link on the team. However, just because you feel like the weakest link on your team doesn’t mean that’s necessarily true! There are areas in which people are stronger and weaker and balancing those strengths to help each other's weak points is what makes a good team become a great team.
-
-							The biggest thing for sport is having a good mentality, and there comes great admiration and respect to people who think their teammates are better than them. This demonstrates that you are a humble person and recognize your own flaws which means you also know that you can grow and improve in different areas. Having a “growth mindset” is the belief that one can grow and improve on one’s abilities over time. Practice is key to helping you grow that self-confidence in your own ability and believe in yourself. With enough practice, you can even get to the same level as your teammates and/or even surpass them!
-						</Text>
-					</View>
-					<View style={{ backgroundColor: COLORS.transparentWhite }}>
+						<Text style={{fontSize:SIZES.medium, fontWeight:'bold', marginHorizontal: 20, color:'blue'}}>Email</Text>
+						<Text style={{fontSize:SIZES.medium, marginHorizontal: 20, color:'blue'}}>MindDesignSports@gmail.com</Text>	
+						<Text style={{fontSize:SIZES.medium, fontWeight:'bold', marginHorizontal: 20, color:'blue'}}>Phone</Text>
+						<Text style={{fontSize:SIZES.medium, marginHorizontal: 20, color:'blue'}}>(201) 503-4902‬</Text>	
+						
 						<TouchableOpacity
 							style={{ padding: 10, margin: 20, borderRadius: 4, alignItems: 'center', backgroundColor: 'firebrick' }}
 							onPress= {() => Linking.openURL('mailto:MindDesignSports@gmail.com?subject=Enquiry&body=')}
@@ -58,7 +52,6 @@ export default function ContactScreen() {
 							</TouchableOpacity>
 						</View>
 					</View>
-				</ScrollView>
 			</ImageBackground>
 		</View>
 	);
