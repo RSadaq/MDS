@@ -1,8 +1,10 @@
-import { COLORS, SIZES, PARAGRAPH } from "./theme";
+import { COLORS, SIZES } from "./theme";
 import backgrounds from "./backgrounds";
+import GalleryImages from "./GalleryImages";
 
 export {
     COLORS,
     SIZES,
-    backgrounds
+    backgrounds,
+    GalleryImages
 }
