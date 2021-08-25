@@ -72,7 +72,8 @@ const styles = StyleSheet.create({
     fontSize: 12,
     fontStyle: 'italic',
     fontWeight: "bold",
-    color: 'white'
+    color: 'white',
+    textAlign: 'center', 
   },
 
   pageStyling: {
@@ -86,7 +87,7 @@ const styles = StyleSheet.create({
     width: 170,
     height: 110,
     backgroundColor: 'firebrick',
-    marginBottom: 10
+    marginBottom: 10,
   },
 
   cardCoverStyling: {

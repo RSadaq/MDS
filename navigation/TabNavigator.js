@@ -88,9 +88,10 @@ const BottomTabNavigator = () => {
 
 const styles = StyleSheet.create({
   logo: {
-    width: 100,
+    width: 110,
     height: 55,
-    marginLeft: 5
+    marginLeft: 5, 
+    marginBottom: 12
   }
 })
 
